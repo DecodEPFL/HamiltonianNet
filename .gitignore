@@ -1,0 +1,7 @@
+.idea/*
+*.DS_store
+data/MNIST/*
+*.pyc
+*.eps
+*/__pycache__/*
+
