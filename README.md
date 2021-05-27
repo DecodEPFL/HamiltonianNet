@@ -20,11 +20,13 @@ python setup.py install
 ```
 where available values for `DATASET` are `swiss_roll` and `double_moons`.
 
+Distributed training on 2D classification examples:
 ```bash
 ./examples/run_distributed.py --dataset [DATASET]
 ```
 where available values for `DATASET` are `swiss_roll` and `double_circles`.
 
+Classification over MNIST dataset:
 ```bash
 ./examples/run_MNIST.py --model [MODEL]
 ```
