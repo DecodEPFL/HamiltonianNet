@@ -1,6 +1,6 @@
 # Hamiltonian Deep Neural Networks
 
-PyTorch implementation of Hamiltonian deep neural networks as presented in [1].
+PyTorch implementation of Hamiltonian deep neural networks as presented in ["Hamiltonian Deep Neural Networks Guaranteeing Non-vanishing Gradients by Design"](https://arxiv.org/pdf/2105.13205.pdf).
 
 ## Installation
 
@@ -89,22 +89,22 @@ _Remark: MS<sub>i</sub> networks were introduced in [3,4]. We have adapted to ma
 -->
 
 ## References
-[1]
+[[1]](https://arxiv.org/pdf/2105.13205.pdf)
 Clara L. Galimberti, Luca Furieri, Liang Xu and Giancarlo Ferrrari Trecate.
 "Hamiltonian Deep Neural Networks Guaranteeing Non-vanishing Gradients by Design,"
-ArXiv ???:????, 2021.
+arXiv:2105.13205, 2021.
 
-[2]
+[[2]](https://arxiv.org/pdf/2104.13166.pdf)
 Clara L. Galimberti, Liang Xu and Giancarlo Ferrrari Trecate.
 "A unified framework for Hamiltonian deep neural networks,"
 arXiv:2104.13166, 2021.
 
-[3] 
+[[3]](https://arxiv.org/pdf/1705.03341.pdf) 
 Eldad Haber and Lars Ruthotto.
 "Stable architectures for deep neural networks,"
 Inverse Problems, vol. 34, p. 014004, Dec 2017.
 
-[4] 
+[[4]](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/download/16517/16577)
 Bo Chang, Lili Meng, Eldad Haber, Lars Ruthotto, David Begert and Elliot Holtham.
 "Reversible architectures for arbitrarily deep residual neural networks,"
 AAAI Conference on Artificial Intelligence, 2018.
