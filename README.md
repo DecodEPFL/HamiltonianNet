@@ -1,6 +1,6 @@
 # Hamiltonian Deep Neural Networks
 
-PyTorch implementation of Hamiltonian deep neural networks as presented in [1].
+PyTorch implementation of Hamiltonian deep neural networks as presented in ["Hamiltonian Deep Neural Networks Guaranteeing Non-vanishing Gradients by Design"](https://arxiv.org/pdf/2105.13205.pdf).
 
 ## Installation
 
@@ -92,7 +92,7 @@ _Remark: MS<sub>i</sub> networks were introduced in [3,4]. We have adapted to ma
 [1]
 Clara L. Galimberti, Luca Furieri, Liang Xu and Giancarlo Ferrrari Trecate.
 "Hamiltonian Deep Neural Networks Guaranteeing Non-vanishing Gradients by Design,"
-ArXiv ???:????, 2021.
+arXiv:2105.13205, 2021.
 
 [2]
 Clara L. Galimberti, Liang Xu and Giancarlo Ferrrari Trecate.
