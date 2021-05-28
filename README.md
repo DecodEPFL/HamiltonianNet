@@ -89,22 +89,22 @@ _Remark: MS<sub>i</sub> networks were introduced in [3,4]. We have adapted to ma
 -->
 
 ## References
-[1]
+%5B[1](https://arxiv.org/pdf/2105.13205.pdf)%5D
 Clara L. Galimberti, Luca Furieri, Liang Xu and Giancarlo Ferrrari Trecate.
 "Hamiltonian Deep Neural Networks Guaranteeing Non-vanishing Gradients by Design,"
 arXiv:2105.13205, 2021.
 
-[2]
+%5B[2](https://arxiv.org/pdf/2104.13166.pdf)%5D
 Clara L. Galimberti, Liang Xu and Giancarlo Ferrrari Trecate.
 "A unified framework for Hamiltonian deep neural networks,"
 arXiv:2104.13166, 2021.
 
-[3] 
+%5B[3](https://arxiv.org/pdf/1705.03341.pdf)%5D 
 Eldad Haber and Lars Ruthotto.
 "Stable architectures for deep neural networks,"
 Inverse Problems, vol. 34, p. 014004, Dec 2017.
 
-[4] 
+%5B[4](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/download/16517/16577)%5D
 Bo Chang, Lili Meng, Eldad Haber, Lars Ruthotto, David Begert and Elliot Holtham.
 "Reversible architectures for arbitrarily deep residual neural networks,"
 AAAI Conference on Artificial Intelligence, 2018.
