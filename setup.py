@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 import setuptools
+import os
+
+
+os.chmod("examples/run.py", 0o744)
+os.chmod("examples/run_MNIST.py", 0o744)
+os.chmod("examples/run_distributed.py", 0o744)
 
 setuptools.setup(
     name="hamiltonianNet",
