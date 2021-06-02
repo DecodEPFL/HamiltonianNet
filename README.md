@@ -5,9 +5,9 @@ PyTorch implementation of Hamiltonian deep neural networks as presented in ["Ham
 ## Installation
 
 ```bash
-git clone https://github.com/ClaraGalimberti/HamiltonianNet.git
+git clone https://github.com/DecodEPFL/HamiltonianNet.git
 
-cd hamiltonianNet
+cd HamiltonianNet
 
 python setup.py install
 ```
