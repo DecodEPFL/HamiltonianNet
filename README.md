@@ -98,9 +98,6 @@ We consider the simple case, where the underlying ODE is
 
 We study the evolution of _**y**(t)_ and _**y**<sub>&gamma;</sub>(t)_, _t &isin; [t<sub>0</sub>, T]_ and _t<sub>0</sub> &isin; [0, T]_, with initial conditions _**y**(t<sub>0</sub>) = **y**<sub>0</sub>_ and _**y**<sub>&gamma;</sub>(t<sub>0</sub>) = **y**<sub>0</sub> &plus; &gamma;**&beta;**_, with _&gamma;_ = 0.05 and _**&beta;**_ the unitary vectors. The initial condition _**y**<sub>0</sub>_ is set randomly, and normalized to have unitary norm.
 
-
-and simulated for _&epsilon;_ = 1 and _T_ = 20.
-
 <p align="center">
 <img src="./gradient_analysis/y.gif" alt="y(t)_counterexample" width="400"/>
 <img src="./gradient_analysis/phi.gif" alt="phi(t)_counterexample" width="400"/>
