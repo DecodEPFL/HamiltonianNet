@@ -63,8 +63,8 @@ After discretization, we have
 We consider two benchmark classification problems: "Swiss roll" and "Double circles", each of them with two categories and two features.
 
 <p align="center">
-<img src="./examples/swissroll.pdf" alt="swissroll" width="400"/>
-<img src="./examples/doublecircles.eps" alt="doublecircles" width="400"/>
+<img src="./examples/swissroll.png" alt="swissroll" width="400"/>
+<img src="./examples/doublecircles.png" alt="doublecircles" width="400"/>
 </p>
 
 An example of each dataset is shown in the figures above together with the predictions of a trained 64-layer H<sub>1</sub>-DNN (colored regions on the background). For these examples, the two features data is augmented, leading to _**y**_<sub>_k_</sub> &isin; &reals;<sup>4</sup>, &ensp; _k_ = 0,...,64.
