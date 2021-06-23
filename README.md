@@ -63,7 +63,7 @@ After discretization, we have
 We consider two benchmark classification problems: "Swiss roll" and "Double circles", each of them with two categories and two features.
 
 <p align="center">
-<img src="./examples/swissroll.eps" alt="swissroll" width="400"/>
+<img src="./examples/swissroll.pdf" alt="swissroll" width="400"/>
 <img src="./examples/doublecircles.eps" alt="doublecircles" width="400"/>
 </p>
 
