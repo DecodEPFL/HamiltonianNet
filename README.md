@@ -38,6 +38,78 @@ To reproduce the counterexample of Appendix III:
 ./examples/gradient_analysis/perturbation_analysis.py
 ```
 
+## Hamiltonian Deep Neural Networks (H-DNNs)
+
+H-DNNs are obtained after the discretization of an ordinary differential equation (ODE) that represents a time-varying Hamiltonian system.
+The time varying dynamics of a Hamiltonian system is given by
+
+<p align="center">
+<img src="https://render.githubusercontent.com/render/math?math=\dot{\boldsymbol{y}}(t)=\boldsymbol{J}(\boldsymbol{y},t)\frac{\partial H(\boldsymbol{y},t)}{\partial \boldsymbol{y}}"> &ensp; and &ensp; <img src="https://render.githubusercontent.com/render/math?math=H(\boldsymbol{y},t) = [\tilde{\sigma}(\boldsymbol{K}(t) \boldsymbol{y}(t)%2B\boldsymbol{b}(t))]^{\top} \boldsymbol{1}">.
+</p>
+
+<!--_**y&#775;**(t) = **J**(**y**,t) &part;H(**y**,t)/&part;**y**_ -->
+
+where _**y**(t)_ &isin; &reals;<sup>_n_</sup> represents the state, _H(**y**,t)_: &reals;<sup>_n_</sup> &times; &reals; &#8594; &reals; is the Hamiltonian function and the _n &times; n_ matrix _**J**_, called interconnection matrix, satisfies 
+<img src="https://render.githubusercontent.com/render/math?math=\boldsymbol{J}(\boldsymbol{y},t)=\boldsymbol{J}^{\top}(\boldsymbol{y},t)\,, \forall t">.
+
+After discretization, we have
+
+* H<sub>1</sub>-DNN: &ensp;
+<img src="https://render.githubusercontent.com/render/math?math=%5Cboldsymbol%7By%7D_%7Bj%2B1%7D%20%3D%20%5Cboldsymbol%7By%7D_j%20%2B%20h%5C%2C%20%5Cboldsymbol%7BJ%7D_j%5C%2C%20%5Cboldsymbol%7BK%7D%5E%5Ctop_j%20%5Csigma(%5Cboldsymbol%7BK%7D_j%20%7B%5Cbf%20y%7D_j%20%2B%5Cboldsymbol%7Bb%7D_j)">
+
+* H<sub>2</sub>-DNN: &ensp; 
+<img src="https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bbmatrix%7D%0A%7B%5Cbf%20p%7D_%7Bj%2B1%7D%20%5C%5C%20%7B%5Cbf%20q%7D_%7Bj%2B1%7D%0A%5Cend%7Bbmatrix%7D%0A%3D%0A%5Cbegin%7Bbmatrix%7D%0A%7B%5Cbf%20p%7D_%7Bj%7D%20%5C%5C%20%7B%5Cbf%20q%7D_%7Bj%7D%0A%5Cend%7Bbmatrix%7D%0A%2B%0Ah%5C%2C%0A%7B%5Cbf%20J%7D%0A%7B%5Cbf%20K%7D%5E%5Ctop_j%20%5Csigma%5Cleft(%7B%5Cbf%20K%7D_j%20%0A%5Cbegin%7Bbmatrix%7D%0A%7B%5Cbf%20p%7D_%7Bj%2B1%7D%20%5C%5C%20%7B%5Cbf%20q%7D_%7Bj%7D%0A%5Cend%7Bbmatrix%7D%0A%2B%7B%5Cbf%20b%7D_j%5Cright)"> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where &nbsp; <img src="https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bbmatrix%7D%0A%7B%5Cbf%20p%7D_j%20%5C%5C%20%7B%5Cbf%20q%7D_j%0A%5Cend%7Bbmatrix%7D=%5Cboldsymbol%7By%7D_j">
+
+## 2D classification examples
+We consider two benchmark classification problems: "Swiss roll" and "Double circles", each of them with two categories and two features.
+
+<p align="center">
+<img src="./examples/swissroll.png" alt="swissroll" width="400"/>
+<img src="./examples/doublecircles.png" alt="doublecircles" width="400"/>
+</p>
+
+An example of each dataset is shown in the figures above together with the predictions of a trained 64-layer H<sub>1</sub>-DNN (colored regions on the background). For these examples, the two features data is augmented, leading to _**y**_<sub>_k_</sub> &isin; &reals;<sup>4</sup>, &ensp; _k_ = 0,...,64.
+
+Figures below shows the hidden feature vectors &mdash;the states _**y**<sub>k</sub>_&mdash; of all the test data after training. First, a change of basis is performed in order to have the classification hyperplane perpendicular to the first basis vector _**x**<sub>1</sub>_. Then, projections are performed on the new coordinate planes.
+
+<p align="center">
+<img src="./examples/propagation_swissroll_12.gif" alt="propagation Swiss roll" width="250"/>
+<img src="./examples/propagation_swissroll_13.gif" alt="propagation Swiss roll" width="250"/>
+<img src="./examples/propagation_swissroll_14.gif" alt="propagation Swiss roll" width="250"/>
+</p>
+
+<p align="center">
+<img src="./examples/propagation_doublecircles_12.gif" alt="propagation Double circles" width="250"/>
+<img src="./examples/propagation_doublecircles_13.gif" alt="propagation Double circles" width="250"/>
+<img src="./examples/propagation_doublecircles_14.gif" alt="propagation Double circles" width="250"/>
+</p>
+
+## Counterexample
+
+Previous work conjetured that some classes of H-DNNs avoid exploding gradients when _**y**(t)_ varies arbitrarily slow. The following numerical example shows that, unfortunately, this is not the case.
+
+We consider the simple case, where the underlying ODE is
+
+<p align="center">
+<i><b>y&#775;</b>(t) = &epsilon; <b>J</b> </i>  tanh( <i><b>y</b>(t)</i> )
+&ensp; &ensp; &ensp; with &ensp;  &ensp; <img src="https://render.githubusercontent.com/render/math?math=%5Cboldsymbol%7BJ%7D%20%3D%20%5Cbegin%7Bbmatrix%7D0%20%26%20-1%20%5C%5C%201%20%26%200%20%5Cend%7Bbmatrix%7D"> &ensp; .
+</p>
+
+We study the evolution of _**y**(t)_ and _**y**<sub>&gamma;</sub>(t)_, _t &isin; [t<sub>0</sub>, T]_ and _t<sub>0</sub> &isin; [0, T]_, with initial conditions _**y**(t<sub>0</sub>) = **y**<sub>0</sub>_ and _**y**<sub>&gamma;</sub>(t<sub>0</sub>) = **y**<sub>0</sub> &plus; &gamma;**&beta;**_, with _&gamma;_ = 0.05 and _**&beta;**_ the unitary vectors. The initial condition _**y**<sub>0</sub>_ is set randomly, and normalized to have unitary norm.
+
+<p align="center">
+<img src="./gradient_analysis/y.gif" alt="y(t)_counterexample" width="400"/>
+<img src="./gradient_analysis/phi.gif" alt="phi(t)_counterexample" width="400"/>
+</p>
+
+The left Figure shows the time evolution of _**y**(t)_, in blue, and _**y**<sub>&gamma;</sub>(t)_, in orange, when a perturbation is applied at a time _t<sub>0</sub> = T-t_. The nominal initial condition (_**y**(T-t)_) is indicated with a blue circle and the perturbated one (_**y**<sub>&gamma;</sub>(T-t)_) with an orange cross. A zoom is presented on the right side, where a green vector indicates the difference between _**y**<sub>&gamma;</sub>(T)_ and _**y**(T)_.
+
+Figure on the right presents the entries _(1,1)_ and _(2,2)_ of the BSM matrix. Note that the value coincides in sign and magnitud with the green vector.
+
+This numerical experiment confirms that the entries of the BSM matrix (we only show 2 of the 4 entries) diverge as the depth of the network increases (i.e. as the perturbation is introduced further away from the output).
+
 
 <!--
 ## H-DNNs
