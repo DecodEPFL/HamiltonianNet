@@ -38,7 +38,7 @@ To reproduce the counterexample of Appendix III:
 ./examples/gradient_analysis/perturbation_analysis.py
 ```
 
-##Hamiltonian Deep Neural Networks (H-DNNs)
+## Hamiltonian Deep Neural Networks (H-DNNs)
 
 H-DNNs are obtained after the discretization of an ordinary differential equation (ODE) that represents a time-varying Hamiltonian system.
 The time varying dynamics of a Hamiltonian system is given by
@@ -62,7 +62,7 @@ After discretization, we have
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where &nbsp; <img src="https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bbmatrix%7D%0A%7B%5Cbf%20p%7D_j%20%5C%5C%20%7B%5Cbf%20q%7D_j%0A%5Cend%7Bbmatrix%7D=%5Cboldsymbol%7By%7D_j">
 
-##2D classification examples
+## 2D classification examples
 We consider two benchmark classification problems: "Swiss roll" and "Double circles", each of them with two categories and two features.
 
 <p align="center">
