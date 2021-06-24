@@ -39,7 +39,8 @@ To reproduce the counterexample of Appendix III:
 ```
 
 ##Hamiltonian Deep Neural Networks (H-DNNs)
-H-DNNs are obrained after the discretization of an ordinary differential equation (ODE) that represents a time-varying Hamiltonian system.
+
+H-DNNs are obtained after the discretization of an ordinary differential equation (ODE) that represents a time-varying Hamiltonian system.
 The time varying dynamics of a Hamiltonian system is given by
 
 <p align="center">
