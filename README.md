@@ -162,14 +162,14 @@ _Remark: MS<sub>i</sub> networks were introduced in [3,4]. We have adapted to ma
 
 ## References
 [[1]](https://arxiv.org/pdf/2105.13205.pdf)
-Clara L. Galimberti, Luca Furieri, Liang Xu and Giancarlo Ferrrari Trecate.
+Clara L. Galimberti, Luca Furieri, Liang Xu and Giancarlo Ferrari Trecate.
 "Hamiltonian Deep Neural Networks Guaranteeing Non-vanishing Gradients by Design,"
 arXiv:2105.13205, 2021.
 
 [[2]](https://arxiv.org/pdf/2104.13166.pdf)
-Clara L. Galimberti, Liang Xu and Giancarlo Ferrrari Trecate.
+Clara L. Galimberti, Liang Xu and Giancarlo Ferrari Trecate.
 "A unified framework for Hamiltonian deep neural networks,"
-arXiv:2104.13166, 2021.
+The third annual Learning for Dynamics & Control (L4DC) conference, preprint arXiv:2104.13166 available, 2021.
 
 [[3]](https://arxiv.org/pdf/1705.03341.pdf) 
 Eldad Haber and Lars Ruthotto.
