@@ -160,6 +160,19 @@ We implement some DNNs using both forward Euler and semi-implicit Euler discreti
 _Remark: MS<sub>i</sub> networks were introduced in [3,4]. We have adapted to match our framework._
 -->
 
+## License
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+The code DOI is [![DOI](https://zenodo.org/badge/371379388.svg)](https://zenodo.org/badge/latestdoi/371379388).
+
+[![CC BY 4.0][cc-by-image]][cc-by] 
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
+
 ## References
 [[1]](https://arxiv.org/pdf/2105.13205.pdf)
 Clara L. Galimberti, Luca Furieri, Liang Xu and Giancarlo Ferrari Trecate.
